@@ -1,0 +1,6 @@
+apiVersion: cache.example.org/v1alpha1
+kind: K8sResourceCloner
+metadata:
+  name: k8sresourcecloner-sample
+spec:
+  size: 2

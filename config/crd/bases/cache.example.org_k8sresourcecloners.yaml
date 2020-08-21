@@ -1,0 +1,71 @@
+
+---
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.2.4
+  creationTimestamp: null
+  name: k8sresourcecloners.cache.example.org
+spec:
+  group: cache.example.org
+  names:
+    kind: K8sResourceCloner
+    listKind: K8sResourceClonerList
+    plural: k8sresourcecloners
+    singular: k8sresourcecloner
+  scope: Namespaced
+  subresources:
+    status: {}
+  validation:
+    openAPIV3Schema:
+      description: K8sResourceCloner is the Schema for the k8sresourcecloners API
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: K8sResourceClonerSpec defines the desired state of K8sResourceCloner
+          properties:
+            size:
+              description: Foo is an example field of K8sResourceCloner. Edit K8sResourceCloner_types.go
+                to remove/update
+              format: int32
+              type: integer
+          required:
+          - size
+          type: object
+        status:
+          description: K8sResourceClonerStatus defines the observed state of K8sResourceCloner
+          properties:
+            nodes:
+              description: 'INSERT ADDITIONAL STATUS FIELD - define observed state
+                of cluster Important: Run "make" to regenerate code after modifying
+                this file'
+              items:
+                type: string
+              type: array
+          required:
+          - nodes
+          type: object
+      type: object
+  version: v1alpha1
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []

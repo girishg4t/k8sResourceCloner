@@ -1,0 +1,9 @@
+domain: example.org
+repo: github.com/girishg4t/k8sResourceCloner
+resources:
+- group: cache
+  kind: K8sResourceCloner
+  version: v1alpha1
+version: "2"
+plugins:
+  go.operator-sdk.io/v2-alpha: {}
