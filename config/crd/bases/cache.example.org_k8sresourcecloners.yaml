@@ -36,13 +36,22 @@ spec:
         spec:
           description: K8sResourceClonerSpec defines the desired state of K8sResourceCloner
           properties:
-            size:
+            fromNamespace:
               description: Foo is an example field of K8sResourceCloner. Edit K8sResourceCloner_types.go
                 to remove/update
-              format: int32
-              type: integer
+              type: string
+            resourceNames:
+              items:
+                type: string
+              type: array
+            toNamespaces:
+              items:
+                type: string
+              type: array
           required:
-          - size
+          - fromNamespace
+          - resourceNames
+          - toNamespaces
           type: object
         status:
           description: K8sResourceClonerStatus defines the observed state of K8sResourceCloner

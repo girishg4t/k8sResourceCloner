@@ -29,7 +29,9 @@ type K8sResourceClonerSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of K8sResourceCloner. Edit K8sResourceCloner_types.go to remove/update
-	Size int32 `json:"size"`
+	FromNamespace string   `json:"fromNamespace"`
+	ToNamespaces  []string `json:"toNamespaces"`
+	ResourceNames []string `json:"resourceNames"`
 }
 
 // K8sResourceClonerStatus defines the observed state of K8sResourceCloner

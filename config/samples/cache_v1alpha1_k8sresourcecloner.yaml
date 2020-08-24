@@ -3,4 +3,11 @@ kind: K8sResourceCloner
 metadata:
   name: k8sresourcecloner-sample
 spec:
-  size: 2
+  fromNamespace : default
+  toNamespaces: 
+  - test
+  - demo
+  resourceNames:  
+   - mysecret
+   - test-secret
+
