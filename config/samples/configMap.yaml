@@ -1,6 +1,6 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: test-secret
+  name: test-configMap
 data:
   special.hello: world

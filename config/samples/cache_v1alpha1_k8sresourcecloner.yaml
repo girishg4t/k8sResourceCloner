@@ -8,6 +8,6 @@ spec:
   - test
   - demo
   resourceNames:  
-   - mysecret
-   - test-secret
+  - mysecret
+  - test-secret
 
