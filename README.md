@@ -1,6 +1,6 @@
 ### K8sResourceCloner
 
-This is the kubernetes operator which will clone the given k8s resources in the given namespaces
+K8sResourceCloner is the kubernetes operator which will clone the given k8s resources from one namespace to another
 
 
 #### Installation
