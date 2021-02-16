@@ -15,12 +15,7 @@ make docker-build docker-push IMG=quay.io/$USERNAME/K8sResourceCloner-operator:v
 make deploy IMG=quay.io/$USERNAME/K8sResourceCloner-operator:v0.0.1
 ```
 
-Create a K8sResourceCloner CR
-```sh
-kubectl apply -f config/samples/cache_v1alpha1_k8sresourcecloner.yaml
-```
-
-### Installation
+### Update config/samples/cache_v1alpha1_k8sresourcecloner.yaml
 Update :  
 **fromNamespace**: from which the resources need to be cloned  
 **toNamespaces**: in which namespace it need to be cloned, mutiple namespaces are allowed  
@@ -41,6 +36,10 @@ spec:
   - test-configMap
    ```
 
+Create a K8sResourceCloner CR
+```sh
+kubectl apply -f config/samples/cache_v1alpha1_k8sresourcecloner.yaml
+```
 After deploying the above Custom resource, it will create the give resouces in specified namespace
 
 # Resources:
